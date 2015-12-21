@@ -1,0 +1,7 @@
+CREATE TABLE `wsys_bjq_img` ( `id` INT( 10 ) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY ) ENGINE=MyISAM DEFAULT CHARSET=latin1; 
+ALTER TABLE `wsys_bjq_img` ADD `tb_name` VARCHAR( 200 ) NULL comment "归属表表名"; 
+ALTER TABLE `wsys_bjq_img` ADD `tb_id` INT( 10 ) UNSIGNED NOT NULL DEFAULT '0'comment "归属表记录id";ALTER TABLE `wsys_bjq_img` ADD INDEX ( `tb_id` ); 
+ALTER TABLE `wsys_bjq_img` ADD `img` VARCHAR( 200 ) NULL comment "图片名（图片url）"; 
+ALTER TABLE `wsys_bjq_img` ADD `token` VARCHAR( 200 ) NULL comment "识别身份token"; 
+
+ALTER TABLE `wsys_bjq_img` ADD `post_date` INT( 10 ) UNSIGNED NOT NULL DEFAULT '0'; ALTER TABLE `wsys_bjq_img` ADD INDEX ( `post_date` ); 
